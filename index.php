@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HeadHunter</title>
-</head>
-<body>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
@@ -13,8 +11,19 @@
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-    
-
+    <link  rel="icon" href="img/favicon.ico" type="image/ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,900&display=swap" rel="stylesheet">
+</head>
+<body >
+    <style type="text/css">
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+        #eslogan {
+	        color: #e91e63;
+        }
+    </style>
     <header class="container-fluid" id="head">
         <div class="row" >
             <div class="col-lg-6 ">
@@ -24,37 +33,56 @@
                 <img src="img/banner5.jpg" alt="banner" class="img-fluid d-none d-md-block d-lg-none">
             </div>
            
-            <div class="col-lg-6 #fce4ec pink lighten-5 p-5">
-                <br><br>
-                <h2 class="mb-3 font-weight-bold"> <center> <strong>Desafía el futuro del trabajo  y el talento</strong> </center>  </h2>
+            <div class="col-lg-6 #fce4ec pink lighten-5 p-5"> 
                 <br>
-                <h4 class="mb-3 font-weight-bolder">  <center>Dejanos tus datos y nos pondremos en contacto contigo</center> </h4>
-                <br><br>
-                <form class="text-center row" action="#!" >
+                <h1 class="mb-3 font-weight-bold"> 
+                    <center> <strong>Desafía el futuro del trabajo <br> y el talento</strong> 
+                </center>  
+                </h1>
+                <br>
+                <h4 class="mb-3 font-weight-light">  
+                    <center>
+                        Déjanos tus datos y nos pondremos en contacto contigo
+                    </center>
+                </h4>
+                <br>
+                <form class="text-center row needs-validation" novalidate action="correos.php" method="POST" id="headhunter">
                     
                     <div class="col-lg-6">
-                       
-                        <input type="text"  class="form-control mb-5" placeholder="Nombre completo">
-                
-                        <input type="email" class="form-control mb-5" placeholder="E-mail">
-
-                        <input type="number" class="form-control mb-5" placeholder="Telefono">
+                        <div class="mb-4">
+                            <input type="text" name="name" id="name"  class="form-control " placeholder="Nombre completo">
+                        </div> 
+                        <div class="mb-4">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
+                        </div>
+                        <div class="mb-4">
+                            <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono">
+                        </div>
                     </div>
 
                     <div class="col-lg-6">
-                       
-                        <input type="text"  class="form-control mb-5" placeholder="Empresa">
-                
-                        <input type="text" class="form-control mb-5" placeholder="Puesto que desea cubrir">
+                        <div class="mb-4">
+                            <input type="text" name="company" id="company"  class="form-control " placeholder="Empresa">
+                        </div> 
+                        <div class="mb-4">
+                            <input type="text" name="position" id="position" class="form-control" placeholder="Puesto que desea cubrir">
+                        </div> 
+                        <div class="mb-4"> 
+                            <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
+                        </div> 
 
-                        <input type="text" class="form-control mb-5" placeholder="Estado">
-                    </div>
-
-                    <div class="form-check mb-5">
-                        <input type="checkbox" class="form-check-input" id="materialContactFormCopy">
-                        <label class="form-check-label" for="materialContactFormCopy">Acepto el aviso de privacidad</label>
                         
                     </div>
+
+                    <div class="col-lg-12">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="defaultCheckedDisabled" checked disabled>
+                        <label class="custom-control-label" for="defaultCheckedDisabled"></label> 
+                        <a href="https://app.bolsarosa.com/aviso-privacidad" class="text-dark"><u>Acepto el aviso de privacidad</u></a>
+                    </div>
+                    <br>
+                    </div>
+                    <br>        
                     <!-- Sign in button -->
                     <div class="col-lg-12">
                         
@@ -70,11 +98,17 @@
     <main >
         <div class="container-fluid">
             <br><br><br><br>
-            <h2 class="mb-3 font-weight-bold"> <center> <strong>HeadHunter Virtual</strong> </center>  </h2>
-            <p class="mb-3 font-weight-bolder"> <center>Para cada vacante hay una candidata ideal.</center> </p>
+            <h2 class="mb-3 font-weight-bold"> 
+                <center> 
+                    <strong>HeadHunter Virtual</strong> 
+                </center>  
+            </h2>
+            <h4 class="mb-3 font-weight-bolder" > 
+                <center id="eslogan">Para cada vacante hay una candidata ideal.</center> 
+            </h4>
             <br>
         
-            <p class="col-lg-8 offset-lg-2 text-center mb-5">   
+            <p class="col-lg-8 offset-lg-2 text-center mb-5 font-weight-lighter">   
                
                 Permítenos ayudarte a encontrar a la persona perfecta para tu empresa y olvídate del proceso 
                 de reclutamiento como lo conoces. Realizamos el servicio de reclutamiento y selección de acuerdo
@@ -102,7 +136,13 @@
             <br>
             <br>
             <br>
-            <h2 class="mb-3 font-weight-bold"> <center> <strong>¿Que nos Diferencia?</strong> </center>  </h2>
+            <h2 class="mb-3 font-weight-bold"> 
+                <center> 
+                    <strong>¿Que nos Diferencia?
+
+                    </strong> 
+                </center>  
+            </h2>
             <br>
             <div class="row">
             <div class="col-lg-4">
@@ -111,14 +151,16 @@
                     <img src="img/precios-competitivos.png" alt="" class="mb-3 float-right">
                     <div class="clearfix"></div>  
                     <h3 class="text-right">Precios Competitivos</h3>
-                    <h5 class="text-right">Cobramos el 100% del sueldo mensual <br> de la vacantepor <strong>solo una vez.</strong></h4>
+                    <h5 class="text-right">Cobramos el 100% del sueldo mensual <br> de la vacantepor <strong>solo una vez.</strong></h5>
                 </div>
                 <br><br>
                 <div class="col-lg-12">
                     <img src="img/diferentes-perfiles.png" alt="" class="mb-3 float-right">
                     <div class="clearfix"></div>  
                     <h3 class="text-right">Diferentes perfiles</h3>
-                    <h5 class="text-right"> <strong>Más de 100,000 candiddatas registradas </strong> <br> y más de 250 CVs NUEVOS diarios.</h4>
+                    <h5 class="text-right"> 
+                        <strong>Más de 100,000 candidatas registradas </strong> <br> y más de 250 CVs NUEVOS diarios.
+                    </h5>
                 </div>
             </div>
             <div class="col-lg-4"> 
@@ -132,14 +174,14 @@
                     <img src="img/mejor-talento.png" alt="" class="mb-3 float-left">
                     <div class="clearfix"></div>  
                     <h3 class="text-left">El mejor talento</h3>
-                    <h5 class="text-left">Perfiles de las candidatas profesionistas, <strong>altamente calificadas</strong> y con experiencia.</h4>
+                    <h5 class="text-left">Perfiles de las candidatas profesionistas, <strong>altamente calificadas</strong> y con experiencia.</h5>
                 </div>
                 <br><br>
                 <div class="col-lg-12">
                     <img src="img/tiempo-respuesta.png" alt="" class="mb-3 float-left">
                     <div class="clearfix"></div>  
                     <h3 class="text-left">Tiempo de respuesta</h3>
-                    <h5 class="text-left"> Manejamos un tiempo de <strong>7 días hábiles </strong> <br> para la entrega de la terna de candidatas.</h4>
+                    <h5 class="text-left"> Manejamos un tiempo de <strong>7 días hábiles </strong> <br> para la entrega de la terna de candidatas.</h5>
                 </div>
             </div>
             </div>
@@ -150,7 +192,11 @@
             <br>
             <br>
             <br>
-            <h2 class="mb-3 font-weight-bold"> <center> <strong>¿Que nos Diferencia?</strong> </center>  </h2>
+            <h2 class="mb-3 font-weight-bold"> 
+                <center> 
+                    <strong>¿Que nos Diferencia?</strong> 
+                </center>  
+            </h2>
             <br>
             <div class="row">
             <div class="col-lg-4">
@@ -167,7 +213,7 @@
                     </center>
                     <div class="clearfix"></div>  
                     <h3 class="text-center">Precios Competitivos</h3>
-                    <h5 class="text-center">Cobramos el 100% del sueldo mensual <br> de la vacantepor <strong>solo una vez.</strong></h4>
+                    <h5 class="text-center font-weight-lighter">Cobramos el 100% del sueldo mensual <br> de la vacantepor <strong>solo una vez.</strong></h4>
                 </div>
                 <br><br>
                 <div class="col-lg-12">
@@ -176,7 +222,7 @@
                     </center>
                     <div class="clearfix"></div>  
                     <h3 class="text-center">Diferentes perfiles</h3>
-                    <h5 class="text-center"> <strong>Más de 100,000 candiddatas registradas </strong> <br> y más de 250 CVs NUEVOS diarios.</h4>
+                    <h5 class="text-center font-weight-lighter"> <strong>Más de 100,000 candiddatas registradas </strong> <br> y más de 250 CVs NUEVOS diarios.</h4>
                 </div>
             </div>
             
@@ -188,7 +234,7 @@
                     </center>
                     <div class="clearfix"></div>  
                     <h3 class="text-center">El mejor talento</h3>
-                    <h5 class="text-center">Perfiles de las candidatas profesionistas, <strong>altamente calificadas</strong> y con experiencia.</h4>
+                    <h5 class="text-center font-weight-lighter">Perfiles de las candidatas profesionistas, <strong>altamente calificadas</strong> y con experiencia.</h4>
                 </div>
                 <br><br>
                 <div class="col-lg-12">
@@ -197,7 +243,7 @@
                     </center>
                     <div class="clearfix"></div>  
                     <h3 class="text-center">Tiempo de respuesta</h3>
-                    <h5 class="text-center"> Manejamos un tiempo de <strong>7 días hábiles </strong> <br> para la entrega de la terna de candidatas.</h4>
+                    <h5 class="text-center font-weight-lighter"> Manejamos un tiempo de <strong>7 días hábiles </strong> <br> para la entrega de la terna de candidatas.</h4>
                 </div>
             </div>
             </div>
@@ -212,7 +258,11 @@
             <div class="row">
                 <div class="col-lg-6 #e0e0e0 grey lighten-2">
                     <br><br>
-                    <h2 class="mb-3 font-weight-bold"> <center> Bolsa Rosa te ayuda a <br> cambiar las reglas </center>  </h2>
+                    <h2 class="mb-3 font-weight-bold"> 
+                        <center> 
+                            Bolsa Rosa te ayuda a <br> cambiar las reglas 
+                        </center>  
+                    </h2>
                     <br><br>
                     <center>
                         <iframe width="460" height="315" src="https://www.youtube.com/embed/AoCXeoUtujM" 
@@ -225,9 +275,13 @@
                 </div>
                 <div class="col-lg-6 #ec407a pink lighten-1 text-white">
                     <br><br>
-                    <h2 class="mb-3 font-weight-bold"> <center> Algunos de nuestros clientes <br> satisfechos </center>  </h2>
+                    <h2 class="mb-3 font-weight-bold"> 
+                        <center> 
+                            Algunos de nuestros clientes <br> satisfechos 
+                        </center>  
+                    </h2>
                     
-                    <p class="p-5 text-center font-weight-bolder">
+                    <p class="p-5 text-center font-weight-light">
                         Bolsa Rosa fue fundamental para no sólo redefinir la búsqueda que tenía en mente,
                         sino paraa pulir a detalle las competencias técnicas y de fit cultural con la organización.
                         No trajeron candidatos por traer, sino me ayudaron a llegar las tres mejores opciones
@@ -265,7 +319,6 @@
                     <div class="col-lg-2 col-md-4 col-sm-4  ">
                         <img src="img/womenowned_240-1-120x120.png" alt="">
                     </div>
-               
                     <div class="col-lg-2 col-md-4 col-sm-4 ">
                         <img src="img/victoria147_240-1-120x120.png" alt="">
                     </div>
@@ -429,7 +482,7 @@
     <br><br>
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© Copyright:
-      <a href="https://mdbootstrap.com/"> Bolsa Rosa. Todos los derechos reservados. Aviso de privacidad</a>
+      <a href="https://app.bolsarosa.com/aviso-privacidad"> Bolsa Rosa. Todos los derechos reservados. Aviso de privacidad</a>
     </div>
     <!-- Copyright -->
   
@@ -444,6 +497,88 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Bootstrap validate-->
+    <script src="js/jquery.validate.min.js"></script>
+
+    <script>
+       
+
+        $.validator.addMethod( "lettersonly", function( value, element ) {
+	        return this.optional( element ) || /^[a-z]+$/i.test( value );
+        }, "No se permiten números en este campo" );
+        
+        $( document ).ready(function() {
+            $( "#headhunter" ).validate( {
+				rules: {
+					name: "required",
+					username: {
+						required: true,
+						minlength: 2
+					},
+					
+					email: {
+						required: true,
+						email: true
+					},
+                    agree: {
+                        required: true
+                    },
+                    phone: {
+                        required: true
+                    },
+                    company: {
+                        required: true
+                    },
+                    position: {
+                        required: true
+                    },
+                    state: {
+                        required: true,
+                        lettersonly: true
+                    }
+
+				},
+				messages: {
+					name: "Por favor, introduzca su <br> nombre completo",
+					
+                    phone: {
+                        required: "Porfavor, introduzca un numero de teléfono",
+                    },
+                    company: {
+                        required: "Porfavor, introduzca el nombre de tu empresa",
+                    },
+                    position: {
+                        required: "Porfavor, introduzca el nombre de la posición que desea cubrir"
+                    },
+                    state: {
+                        required: "Porfavor, introduzca el estado de procedencia",
+                        
+                    },
+					email: "Porfavor, introduzca un cuenta de email valida",
+					agree: {
+                        required: "Aún no ha aceptado las politicas de la empresa"
+                    }
+				},
+				errorElement: "em",
+				errorPlacement: function ( error, element ) {
+					// Add the `help-block` class to the error element
+					error.addClass( "help-block" );
+
+					if ( element.prop( "type" ) === "checkbox" ) {
+						error.insertAfter( element.parent( "label" ) );
+					} else {
+						error.insertAfter( element );
+					}
+				},
+				highlight: function ( element, errorClass, validClass ) {
+					$( element ).parents( ".col-sm-5" ).addClass( "invalid-feedback" ).removeClass( "valid-feedback" );
+				},
+				unhighlight: function (element, errorClass, validClass) {
+					$( element ).parents( ".col-sm-5" ).addClass( "valid-feedback" ).removeClass( "invalid-feedback" );
+                } 
+			} );
+        });
+    </script>
     
 </body>
 </html>
