@@ -33,7 +33,7 @@
                 <img src="img/banner5.jpg" alt="banner" class="img-fluid d-none d-md-block d-lg-none">
             </div>
            
-            <div class="col-lg-6 #fce4ec pink lighten-5 p-5"> 
+            <div class="col-lg-6 p-5" style="background-color: #fde7eb;"> 
                 <br>
                 <h1 class="mb-3 font-weight-bold"> 
                     <center> <strong>Desafía el futuro del trabajo <br> y el talento</strong> 
@@ -86,7 +86,7 @@
                     <!-- Sign in button -->
                     <div class="col-lg-12">
                         
-                        <button type="submit" class=" white-text btn btn-rounded btn-lg col-lg-6 #e91e63 pink">Enviar</button>
+                        <button type="submit" class=" white-text btn btn-rounded btn-lg col-lg-6" style="background-color: #ef446d;">Enviar</button>
                     </div>
             
                 </form>
@@ -273,7 +273,7 @@
                     </center>
                     <br><br><br>
                 </div>
-                <div class="col-lg-6 #ec407a pink lighten-1 text-white">
+                <div class="col-lg-6 text-white" style="background-color: #ef446d;">
                     <br><br>
                     <h2 class="mb-3 font-weight-bold"> 
                         <center> 
@@ -281,17 +281,17 @@
                         </center>  
                     </h2>
                     
-                    <p class="p-5 text-center font-weight-light">
+                    <h5 class="p-5 text-center font-weight-bolder" style="background-image: url(img/quote.png); background-repeat: no-repeat; background-position: center;">
                         Bolsa Rosa fue fundamental para no sólo redefinir la búsqueda que tenía en mente,
                         sino paraa pulir a detalle las competencias técnicas y de fit cultural con la organización.
                         No trajeron candidatos por traer, sino me ayudaron a llegar las tres mejores opciones
                         que pudiesen ser "esa persona" que nos ayudaría a alcanzar nuestros objetivos como
-                        organización
-                    </p>
+                        organización.
+                    </h5>
 
                     
                     <center>
-                        <h3 ><strong>GO</strong>integro</h3>
+                        <img src="img/GOintegro-blanco.png" alt="">
                         <h4 class="font-weight-bolder">Beatriz Rivas</h4>
                         <h4 class="font-weight-bold">Empresa</h4>
                     </center> 
@@ -501,8 +501,6 @@
     <script src="js/jquery.validate.min.js"></script>
 
     <script>
-       
-
         $.validator.addMethod( "lettersonly", function( value, element ) {
 	        return this.optional( element ) || /^[a-z]+$/i.test( value );
         }, "No se permiten números en este campo" );
