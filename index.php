@@ -9,6 +9,7 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/formValidation.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link  rel="icon" href="img/favicon.ico" type="image/ico" />
@@ -49,25 +50,25 @@
                 <form class="text-center row needs-validation" novalidate action="correos.php" method="POST" id="headhunter">
                     
                     <div class="col-lg-6">
-                        <div class="mb-4">
+                        <div class="form-group mb-4">
                             <input type="text" name="name" id="name"  class="form-control " placeholder="Nombre completo">
                         </div> 
-                        <div class="mb-4">
+                        <div class="form-group mb-4">
                             <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
                         </div>
-                        <div class="mb-4">
+                        <div class="form-group mb-4">
                             <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono">
                         </div>
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="mb-4">
+                        <div class="form-group mb-4">
                             <input type="text" name="company" id="company"  class="form-control " placeholder="Empresa">
                         </div> 
-                        <div class="mb-4">
+                        <div class="form-group mb-4">
                             <input type="text" name="position" id="position" class="form-control" placeholder="Puesto que desea cubrir">
                         </div> 
-                        <div class="mb-4"> 
+                        <div class="form-group mb-4"> 
                             <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
                         </div> 
 
@@ -265,7 +266,7 @@
                     </h2>
                     <br><br>
                     <center>
-                        <iframe width="460" height="315" src="https://www.youtube.com/embed/AoCXeoUtujM" 
+                        <iframe class="col-12" width="460" height="315" src="https://www.youtube.com/embed/AoCXeoUtujM" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
@@ -380,59 +381,59 @@
 
             <div class="row">
                 
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/inadem_190-1-120x120.png" alt="">
                     </div>
-                    <div class="col-5 ">
+                    <div class="col-6 ">
                         <img src="img/cartier_240-1-120x120.png" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/womenowned_240-1-120x120.png" alt="">
                     </div>
                
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/victoria147_240-1-120x120.png" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/enlace_240-120x120.png" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/1j_93Z9kl5oK_FT8y1dFwow-120x120.png" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/forbes-logo-120x120.png" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/banregio-120x120.png" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/famsa-120x120.jpg" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/pepsico-120x120.jpg" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/femsa-120x120.jpg" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/autozone-120x120.jpg" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/oxxo-120x120.jpg" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/femsa-comercio-120x120.jpg" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/caintra-120x120.jpg" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/whirlpool-120x120.jpg" alt="">
                     </div>
-                    <div class="offset-2 col-5">
+                    <div class="offset-1 col-5">
                         <img src="img/cemex-120x120.jpg" alt="">
                     </div>
-                    <div class="col-5">
+                    <div class="col-6">
                         <img src="img/HEB-120x120.png" alt="">
                     </div>
                 
@@ -446,40 +447,8 @@
     </main>
 
     <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
-    <br><br>
-    <!-- Footer Elements -->
-    <div class="container">
-  
-      <!-- Social buttons -->
-
-      <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-            <a class="btn-floating btn-dribbble mx-1" href="https://bolsarosa.com/">
-                <i class="fas fa-globe"></i>
-            </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-fb mx-1">
-            <i class="fab fa-facebook-f"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-tw mx-1">
-            <i class="fab fa-twitter"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1">
-            <i class="fab fa-linkedin-in"> </i>
-          </a>
-        </li> 
-      </ul>
-      <!-- Social buttons -->
-
-    </div>
-    <!-- Footer Elements -->
-    <br><br>
+<footer class="page-footer font-small special-color-dark ">
+    
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© Copyright:
       <a href="https://app.bolsarosa.com/aviso-privacidad"> Bolsa Rosa. Todos los derechos reservados. Aviso de privacidad</a>
@@ -498,84 +467,84 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
     <!-- Bootstrap validate-->
-    <script src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/FormValidation.full.min.js"></script>
+    <script src="js/plugins/Bootstrap.min.js"></script>
 
     <script>
-        $.validator.addMethod( "lettersonly", function( value, element ) {
-	        return this.optional( element ) || /^[a-z]+$/i.test( value );
-        }, "No se permiten números en este campo" );
-        
-        $( document ).ready(function() {
-            $( "#headhunter" ).validate( {
-				rules: {
-					name: "required",
-					username: {
-						required: true,
-						minlength: 2
-					},
-					
-					email: {
-						required: true,
-						email: true
-					},
-                    agree: {
-                        required: true
+        document.addEventListener('DOMContentLoaded', function(e) {
+        FormValidation.formValidation(
+            document.getElementById('headhunter'),
+            {
+                fields: {
+                    name: {
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre es requerido'
+                            },
+                        }
                     },
+                    email: {
+                        validators: {
+                            notEmpty: {
+                                message: 'El email es requerido'
+                            },
+                            emailAddress: {
+                            message: 'Introduzca una direción de email valida'
+                            },   
+                        }
+                    },
+
                     phone: {
-                        required: true
+                        validators: {
+                            notEmpty: {
+                                message: 'El número telefonico es requerido'
+                            },
+                            
+                        }
                     },
                     company: {
-                        required: true
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre de la empresa es requerido'
+                            },
+                            
+                        }
                     },
                     position: {
-                        required: true
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre de la puesto es requerido'
+                            },
+                            
+                        }
                     },
                     state: {
-                        required: true,
-                        lettersonly: true
-                    }
-
-				},
-				messages: {
-					name: "Por favor, introduzca su <br> nombre completo",
-					
-                    phone: {
-                        required: "Porfavor, introduzca un numero de teléfono",
+                        validators: {
+                            notEmpty: {
+                                message: 'El nombre es requerido'
+                            },
+                            regexp: {
+                                regexp: /^[a-zA-Z0-9_]+$/,
+                                message: 'El nombre solo puede constar de carácteres alfabéticos, '
+                            }
+                        }
                     },
-                    company: {
-                        required: "Porfavor, introduzca el nombre de tu empresa",
-                    },
-                    position: {
-                        required: "Porfavor, introduzca el nombre de la posición que desea cubrir"
-                    },
-                    state: {
-                        required: "Porfavor, introduzca el estado de procedencia",
-                        
-                    },
-					email: "Porfavor, introduzca un cuenta de email valida",
-					agree: {
-                        required: "Aún no ha aceptado las politicas de la empresa"
-                    }
-				},
-				errorElement: "em",
-				errorPlacement: function ( error, element ) {
-					// Add the `help-block` class to the error element
-					error.addClass( "help-block" );
-
-					if ( element.prop( "type" ) === "checkbox" ) {
-						error.insertAfter( element.parent( "label" ) );
-					} else {
-						error.insertAfter( element );
-					}
-				},
-				highlight: function ( element, errorClass, validClass ) {
-					$( element ).parents( ".col-sm-5" ).addClass( "invalid-feedback" ).removeClass( "valid-feedback" );
-				},
-				unhighlight: function (element, errorClass, validClass) {
-					$( element ).parents( ".col-sm-5" ).addClass( "valid-feedback" ).removeClass( "invalid-feedback" );
-                } 
-			} );
-        });
+                   
+                },
+                plugins: {
+                    trigger: new FormValidation.plugins.Trigger(),
+                    bootstrap: new FormValidation.plugins.Bootstrap(),
+                    submitButton: new FormValidation.plugins.SubmitButton(),
+                    icon: new FormValidation.plugins.Icon({
+                        valid: 'fa fa-check',
+                        invalid: 'fa fa-times',
+                        validating: 'fa fa-refresh'
+                    }),
+                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
+                },
+            }
+        );
+    });
     </script>
     
 </body>
