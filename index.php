@@ -475,10 +475,11 @@
     const form = document.forms['headhunter']
 
     form.addEventListener('submit', e => { e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => window.location.reload(false))
-        .then(response => window.alert("Solicitud de contacto enviada exitosamente, nos pondremos en contacto contigo muy pronto ya puedes cerrar esta página."))
-        .catch(error => console.error('Error!', error.message))
+        fetch('correos.php', { method: 'POST', body: new FormData(form)})
+            .then(fetch(scriptURL, { method: 'POST', body: new FormData(form)}) )
+            .then(response => window.location.reload(false))
+            .then(response => window.alert("Solicitud de contacto enviada exitosamente, nos pondremos en contacto contigo muy pronto ya puedes cerrar esta página."))
+            .catch(error => console.error('Error!', error.message))
     })
     </script>
 
