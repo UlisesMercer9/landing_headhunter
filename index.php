@@ -47,31 +47,34 @@
                     </center>
                 </h4>
                 <br>
-                <form class="text-center row needs-validation" novalidate action="correos.php" method="POST" id="headhunter">
+                <form class="text-center row" action="" method="POST" id="headhunter">
                     
                     <div class="col-lg-6">
                         <div class="form-group mb-4">
-                            <input type="text" name="name" id="name"  class="form-control " placeholder="Nombre completo">
+                            <input type="text" name="nombre" id="nombre"  class="form-control " placeholder="Nombre completo" required>
                         </div> 
                         <div class="form-group mb-4">
-                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail">
+                            <input type="email" name="email" id="email" class="form-control" placeholder="E-mail" required>
                         </div>
                         <div class="form-group mb-4">
-                            <input type="number" name="phone" id="phone" class="form-control" placeholder="Teléfono">
+                            <input type="number" name="telefono" id="telfono" class="form-control" placeholder="Teléfono" required>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="form-group mb-4">
-                            <input type="text" name="company" id="company"  class="form-control " placeholder="Empresa">
+                            <input type="text" name="compañia" id="compañia"  class="form-control " placeholder="Empresa" required>
                         </div> 
                         <div class="form-group mb-4">
-                            <input type="text" name="position" id="position" class="form-control" placeholder="Puesto que desea cubrir">
+                            <input type="text" name="posicion" id="posicion" class="form-control" placeholder="Puesto que desea cubrir" required>
                         </div> 
                         <div class="form-group mb-4"> 
-                            <input type="text" name="state" id="state" class="form-control" placeholder="Estado">
+                            <input type="text" name="estado" id="estado" class="form-control" placeholder="Estado" required>
                         </div> 
+                        
+                        <?php $fcha = date("d-m-Y");?>
 
+                        <input type="hidden" class="form-control" name="fecha" value="<?php echo $fcha;?>" >
                         
                     </div>
 
@@ -92,6 +95,7 @@
             
                 </form>
                 <!-- Default form subscription -->
+                
             </div>
         </div>
     </header>
@@ -390,7 +394,6 @@
                     <div class="offset-1 col-5">
                         <img src="img/womenowned_240-1-120x120.png" alt="">
                     </div>
-               
                     <div class="col-6">
                         <img src="img/victoria147_240-1-120x120.png" alt="">
                     </div>
@@ -466,82 +469,19 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Bootstrap validate-->
-    <script type="text/javascript" src="js/FormValidation.full.min.js"></script>
-    <script src="js/plugins/Bootstrap.min.js"></script>
-
+  
     <script>
-        document.addEventListener('DOMContentLoaded', function(e) {
-        FormValidation.formValidation(
-            document.getElementById('headhunter'),
-            {
-                fields: {
-                    name: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre es requerido'
-                            },
-                        }
-                    },
-                    email: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El email es requerido'
-                            },
-                            emailAddress: {
-                            message: 'Introduzca una direción de email valida'
-                            },   
-                        }
-                    },
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzWL3d7ysCSP0IldC2KwnkhSV5S9CF39jOodlPe133Wehb7PEO6/exec'
+    const form = document.forms['headhunter']
 
-                    phone: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El número telefonico es requerido'
-                            },
-                            
-                        }
-                    },
-                    company: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre de la empresa es requerido'
-                            },
-                            
-                        }
-                    },
-                    position: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre de la puesto es requerido'
-                            },
-                            
-                        }
-                    },
-                    state: {
-                        validators: {
-                            notEmpty: {
-                                message: 'El nombre es requerido'
-                            }
-                        }
-                    },
-                   
-                },
-                plugins: {
-                    trigger: new FormValidation.plugins.Trigger(),
-                    bootstrap: new FormValidation.plugins.Bootstrap(),
-                    submitButton: new FormValidation.plugins.SubmitButton(),
-                    icon: new FormValidation.plugins.Icon({
-                        valid: 'fa fa-check',
-                        invalid: 'fa fa-times',
-                        validating: 'fa fa-refresh'
-                    }),
-                    defaultSubmit: new FormValidation.plugins.DefaultSubmit(),
-                },
-            }
-        );
-    });
+    form.addEventListener('submit', e => { e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => window.location.reload(false))
+        .then(response => window.alert("Solicitud de contacto enviada exitosamente, nos pondremos en contacto contigo muy pronto ya puedes cerrar esta página."))
+        .catch(error => console.error('Error!', error.message))
+    })
     </script>
+
     <!-- Event snippet for HH_Octubre 2020 conversion page
 ||  In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
